@@ -15,6 +15,7 @@ helper: FIXME     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Li
 contact: "ppomorsk@sharcnet.ca"    # contact email address for workshop organizer, such as "grace@hopper.org"
 etherpad:         # optional (insert the URL for your Etherpad if you're using one)
 eventbrite:       # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
+conference: "187"               # optional (insert the key for Western's conference page, e.g., "123")
 ---
 <!--
   HEADER
@@ -42,6 +43,45 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   scrolling="auto">
 </iframe>
 {% endif %}
+
+<!--
+  WESTERN REGISTRATION
+
+  This block gives a link the Western conference registration page if
+  'conference' has been set in the header.  You can delete it if you
+  are not using the Western conference registration system, or leave
+  it in, since it will not be displayed if the 'conference' field in
+  the header is not set.
+-->
+{% if page.conference %}
+<h2 id="registration">Registration</h2>
+<p id="cost">
+  <strong>Cost:</strong>
+  A $20 non-refundable desposit is required to register.
+</p>
+<p id="register">
+  <strong>Where:</strong>
+  Please go to
+  the <a href="https://conferences.adt.its.uwo.ca/Default.aspx?conferenceID={{page.conference}}"
+  target="_blank">registration page</a> (opens a new window) to register.
+</p>
+{% endif %}
+
+<h2 id="registration">Registration</h2>
+<p id="cost">
+  <strong>Cost:</strong>
+  A $20 non-refundable desposit is required to register.
+</p>
+<p id="register">
+  <strong>Where:</strong>
+  This workshop is now over.  To recieve pre-notification of the next
+  Software Carpentry workshop at Western, please add yourself to the
+  <a href="https://docs.google.com/forms/d/1bnsulkNPN7XUZXoaOTXgnqCpqSxfFh7Ce-qejnJl_-w/viewform"
+  target="_blank">waiting list</a> (opens a new window).
+</p>
+
+
+
 
 <h2 id="general">General Information</h2>
 
